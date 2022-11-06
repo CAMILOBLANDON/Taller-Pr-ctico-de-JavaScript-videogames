@@ -4,12 +4,17 @@ const btnUp=document.getElementById('up');
 const btnLeft=document.getElementById('left');
 const btnRight=document.getElementById('right');
 const btnDown=document.getElementById('down');
-const livesHtml=document.getElementById('lives')
-const levelHtml=document.getElementById('level')
-const timeHtml=document.getElementById('time')
-const recordView=document.getElementById('record')
-const result=document.getElementById('result')
-
+const livesHtml=document.getElementById('lives');
+const levelHtml=document.getElementById('level');
+const timeHtml=document.getElementById('time');
+const recordView=document.getElementById('record');
+const result=document.getElementById('result');
+const start=document.getElementById('startGame');
+const reload=document.getElementById('reload');
+const a=document.getElementById('a');
+const b=document.getElementById('b');
+const c=document.getElementById('c');
+const d=document.getElementById('d');
 let canvasSize;
 let elementSize;
 let level=0;
@@ -31,6 +36,12 @@ let enemiesPositions=[];
 
 window.addEventListener('load',setCanvasSize);
 window.addEventListener('resize',setCanvasSize);
+start.addEventListener('click',beforeGame);
+reload.addEventListener('click',reloadGame);
+function reloadGame(){
+    location.reload();
+    
+}
 function fixNumbre(n){
     return Number(n.toFixed(2));
 }
@@ -47,9 +58,28 @@ function setCanvasSize(){
     elementSize =canvasSize/10;
     playerPosition.x=undefined;
     playerPosition.y=undefined;
+    
+}
+function beforeGame(){
+    start.classList.add('none');
+
+    canvas.classList.remove('none');
+    btnUp.classList.remove('none');
+    btnLeft.classList.remove('none');
+    btnRight.classList.remove('none');
+    btnDown.classList.remove('none');
+    livesHtml.classList.remove('none');
+    levelHtml.classList.remove('none');
+    timeHtml.classList.remove('none');
+    recordView.classList.remove('none');
+    reload.classList.remove('none');
+    a.classList.remove('none')
+    b.classList.remove('none')
+    c.classList.remove('none')
+    d.classList.remove('none')
+    
     startGame();
 }
-
 function startGame(){
     //console.log({elementSize,canvasSize})
     game.font=elementSize+'px Verdana'; 
@@ -150,10 +180,10 @@ function levelFail(){
         lives=3;
         level =0;
         timeStart=undefined;
+        
     }
     playerPosition.x=undefined;
     playerPosition.y=undefined;
-    
     startGame();
 }
 

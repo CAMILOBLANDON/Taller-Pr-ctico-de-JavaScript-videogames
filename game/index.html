@@ -9,20 +9,24 @@
 </head>
 <body>
     <div class="game-container">
-        <canvas id="game"></canvas>
-
+        <canvas id="game" class="none"></canvas>
+        <button class="btnBig" id="startGame">start Game</button>
         <div class="btns">
-            <button id="up">Arriba</button>
-            <button id="left">Izquiersa</button>
-            <button id="right">Derecha</button>
-            <button id="down">Abajo</button>
+            <button class="none" id="up">Arriba</button>
+            <button class="none"  id="left">Izquiersa</button>
+            <button class="none"  id="right">Derecha</button>
+            <button class="none"  id="down">Abajo</button>
         </div>
-        <div class="messages">
+        <div class="btns">
+            
+            <button class="none"  id="reload"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMtJREFUSEvtk8ENwkAMBCcVQAl0ACVAB3QAnQCVQAtUAFRCKaCVEik6zmcfyv3iTx5xPN5dp6NxdY3nMwNchyMW3YCjO8loKAGWwAPYwP9ZWQAN1XBBVBGlWQ25D2XHtcKSJ3AB9PypKQDDUEHOKaFkkTZaOBat+gM49X27VIkXsiDrQAbaXJAXsB2riIQXOVMpeefURgCRvJsDBovuwL7WopICbX4YXU9VyNbgj/Gi6kxLW6cAXY4sCv9okVDDPVNdkQmcAW4WzS36AtF4Ghk2Q+bkAAAAAElFTkSuQmCC"/></button>
+        </div>
+        <div  class="messages">
             <!-- TODO -->
-            <p>Level: <span id="level"></span></p>
-            <p>Vidas: <span id="lives"></span></p>
-            <p>Tiempo: ⏱ <span id="time"></span></p>
-            <p>Record: 🏆 <span id="record"></span></p>
+            <p id="a" class="none">Level: <span id="level"></span></p>
+            <p id="b" class="none">Vidas: <span id="lives"></span></p>
+            <p id="c" class="none">Tiempo: ⏱ <span id="time"></span></p>
+            <p id="d" class="none">Record: 🏆 <span id="record"></span></p>
             <p id="result"></p>
         </div>
     </div>

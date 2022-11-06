@@ -5,7 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.none{
+    display: none;
+}
 .game-container {
     display: flex;
     align-items: center;
@@ -21,7 +23,17 @@ canvas {
     padding: 5px;
     background-color: #feff9d;
 }
-
+.btnBig{
+    place-content: center;
+    background-color: #fdef05;
+    border-radius: 8px;
+    border-color: #ff6600;
+    font-family: inherit;
+    
+    font-size:20px;
+    padding: 10px 30px;
+    width: 200px;
+}
 .btns {
     display: flex;
     justify-content: center;
